@@ -1,7 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/providers/favorite_provider.dart';
-import 'package:food_delivery/utils/constants.dart';
+import 'package:food_delivery/utils/colors.dart';
+import 'package:food_delivery/utils/image_path.dart';
+import 'package:food_delivery/utils/ui_helpers.dart';
 import 'package:food_delivery/widgets/shimmer_list_widget.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shimmer/shimmer.dart';
@@ -95,8 +97,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(15),
                                         child: FadeInImage.assetNetwork(
-                                          placeholder:
-                                              'assets/images/empty.png',
+                                          placeholder: ImagePath.empty,
                                           image: favoriteItem['image'],
                                           fit: BoxFit.cover,
                                           width: 100,
@@ -116,7 +117,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                                     ],
                                   ),
                                 ),
-                                const SizedBox(width: 10),
+                                horizontalSpaceSmall,
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -127,7 +128,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                                         fontSize: 16,
                                       ),
                                     ),
-                                    const SizedBox(height: 5),
+                                    verticalSpaceTiny,
                                     Row(
                                       children: [
                                         const Icon(
@@ -155,7 +156,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                                           size: 16,
                                           color: Colors.grey,
                                         ),
-                                        const SizedBox(width: 5),
+                                        horizontalSpaceTiny,
                                         Text(
                                           "${favoriteItem['time']} Min",
                                           style: const TextStyle(

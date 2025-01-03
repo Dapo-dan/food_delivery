@@ -1,13 +1,12 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:food_delivery/core/app_set_up.dart';
 import 'package:food_delivery/providers/favorite_provider.dart';
 import 'package:food_delivery/providers/quantity_provider.dart';
 import 'package:provider/provider.dart';
 import 'Views/app_main_screen.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+ await appSetUp();
   runApp(const MyApp());
 }
 

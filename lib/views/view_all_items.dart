@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery/utils/constants.dart';
+import 'package:food_delivery/utils/colors.dart';
+import 'package:food_delivery/utils/ui_helpers.dart';
 import 'package:food_delivery/widgets/food_items_display.dart';
 import 'package:food_delivery/widgets/icon_button.dart';
 import 'package:iconsax/iconsax.dart';
@@ -52,7 +53,7 @@ class _ViewAllItemsState extends State<ViewAllItems> {
         padding: const EdgeInsets.only(left: 15, right: 5),
         child: Column(
           children: [
-            const SizedBox(height: 10),
+           verticalSpaceSmall,
             StreamBuilder(
               stream: completeApp.snapshots(),
               builder: (context, AsyncSnapshot<QuerySnapshot> streamSnapshot) {
@@ -79,7 +80,7 @@ class _ViewAllItemsState extends State<ViewAllItems> {
                                 Iconsax.star1,
                                 color: Colors.amberAccent,
                               ),
-                              const SizedBox(width: 5),
+                              horizontalSpaceTiny,
                               Text(
                                 documentSnapshot['rating'],
                                 style: const TextStyle(
@@ -87,7 +88,7 @@ class _ViewAllItemsState extends State<ViewAllItems> {
                                 ),
                               ),
                               const Text("/5"),
-                              const SizedBox(width: 5),
+                              horizontalSpaceTiny,
                               Text(
                                 "${documentSnapshot['review'.toString()]} Reviews",
                                 style: const TextStyle(

@@ -2,7 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/providers/favorite_provider.dart';
 import 'package:food_delivery/providers/quantity_provider.dart';
-import 'package:food_delivery/utils/constants.dart';
+import 'package:food_delivery/utils/colors.dart';
+import 'package:food_delivery/utils/ui_helpers.dart';
 import 'package:food_delivery/widgets/icon_button.dart';
 import 'package:food_delivery/widgets/quantity_increment_decrement.dart';
 import 'package:iconsax/iconsax.dart';
@@ -101,7 +102,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 10),
+            verticalSpaceSmall,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
@@ -114,7 +115,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  verticalSpaceSmall,
                   Row(
                     children: [
                       const Icon(
@@ -142,7 +143,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                         size: 20,
                         color: Colors.grey,
                       ),
-                      const SizedBox(width: 5),
+                      horizontalSpaceTiny,
                       Text(
                         "${widget.documentSnapshot['time']} Min",
                         style: const TextStyle(
@@ -153,7 +154,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10),
+                  verticalSpaceSmall,
                   // for rating
                   Row(
                     children: [
@@ -161,7 +162,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                         Iconsax.star1,
                         color: Colors.amberAccent,
                       ),
-                      const SizedBox(width: 5),
+                      horizontalSpaceTiny,
                       Text(
                         widget.documentSnapshot['rating'],
                         style: const TextStyle(
@@ -169,7 +170,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                         ),
                       ),
                       const Text("/5"),
-                      const SizedBox(width: 5),
+                      horizontalSpaceTiny,
                       Text(
                         "${widget.documentSnapshot['review']} Reviews",
                         style: const TextStyle(
@@ -178,7 +179,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  verticalSpaceMedium,
                   Row(
                     children: [
                       const Column(
@@ -234,7 +235,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 20),
+                          horizontalSpaceMedium,
                           // ingredient name
                           Center(
                             child: Text(
@@ -263,7 +264,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                       height: 15,
                     ),
                   ),
-                  const SizedBox(height: 100),
+                 verticalSpaceMassive,
                 ],
               ),
             ),

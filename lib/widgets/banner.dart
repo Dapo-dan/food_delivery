@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/utils/constants.dart';
+import 'package:food_delivery/utils/colors.dart';
 
 class BannerToExplore extends StatelessWidget {
   const BannerToExplore({super.key});

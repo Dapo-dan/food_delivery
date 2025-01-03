@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery/utils/constants.dart';
+import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/views/view_all_items.dart';
 import 'package:food_delivery/widgets/banner.dart';
 import 'package:food_delivery/widgets/food_items_display.dart';

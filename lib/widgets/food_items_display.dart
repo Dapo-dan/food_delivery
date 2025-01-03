@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/providers/favorite_provider.dart';
+import 'package:food_delivery/utils/image_path.dart';
 import 'package:food_delivery/views/recipie_detail_screen.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shimmer/shimmer.dart';
@@ -50,7 +51,7 @@ class FoodItemsDisplay extends StatelessWidget {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15),
                         child: FadeInImage.assetNetwork(
-                          placeholder: 'assets/images/empty.png',
+                          placeholder: ImagePath.empty,
                           image: documentSnapshot['image'],
                           fit: BoxFit.cover,
                           width: double.infinity,
