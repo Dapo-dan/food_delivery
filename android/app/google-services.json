@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "976739411489",
+    "project_id": "food-delivery-57ec0",
+    "storage_bucket": "food-delivery-57ec0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976739411489:android:ba9821e44a2a75966c6560",
+        "android_client_info": {
+          "package_name": "com.dapo.foodDelivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsfQVSXuSYE48mm6cZwGb2wwgAc1XfkkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
